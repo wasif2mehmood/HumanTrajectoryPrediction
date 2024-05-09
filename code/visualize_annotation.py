@@ -8,7 +8,7 @@ import os
 from tqdm import tqdm
 from glob import glob
 
-from get_prepared_data_sdd import class2classid
+from code.get_prepared_data_t import class2classid
 
 parser = argparse.ArgumentParser()
 parser.add_argument("preparepath")

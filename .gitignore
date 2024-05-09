@@ -3,5 +3,6 @@ packed_models_eccv2020.tgz
 packed_prepro_eccv2020.tgz
 sdd_data_splits_eccv2020.tgz
 myenv
-packed_models
+model
 deeplabv3_xception_ade20k_train
+anchor_actev_4view_videos
