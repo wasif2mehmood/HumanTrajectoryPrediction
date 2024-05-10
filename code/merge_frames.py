@@ -1,10 +1,17 @@
 import cv2
 import os
 import argparse
+import re
+
+def atoi(text):
+    return int(text) if text.isdigit() else text
+
+def natural_keys(text):
+    return [atoi(c) for c in re.split(r'(\d+)', text)]
 
 def merge_frames_to_video(input_dir, output_file, fps):
     images = [img for img in os.listdir(input_dir) if img.endswith(".jpg")]
-    images.sort()
+    images.sort(key=natural_keys)
 
     frame = cv2.imread(os.path.join(input_dir, images[0]))
     height, width, layers = frame.shape
