@@ -28,7 +28,7 @@ python code/preprocess.py prepared_data_fold1/traj_2.5fps/ prepro_fold1 \
  --scene_h 36 --scene_w 64 --grid_strides 2,4 --video_h 1080 --video_w 1920 \
  --add_grid --add_all_reg
 
-python code/test.py prepro_fold1/ model/ best_simaug_model \
+python code/test.py prepro_fold1/ model/ model \
 --wd 0.001 --runId 0 --obs_len 8 --pred_len 12 --emb_size 32 --enc_hidden_size 256 \
 --dec_hidden_size 256 --activation_func tanh --keep_prob 1.0 --num_epochs 30 \
 --batch_size 12 --init_lr 0.3 --use_gnn --learning_rate_decay 0.95 --num_epoch_per_decay 5.0 \
